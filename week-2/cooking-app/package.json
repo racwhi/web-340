@@ -1,0 +1,13 @@
+{
+  "name": "cooking-app",
+  "version": "1.0.0",
+  "description": "Week 2 cooking-app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node tester.js"
+  },
+  "keywords": [],
+  "author": "Rachel White",
+  "license": "ISC"
+}
