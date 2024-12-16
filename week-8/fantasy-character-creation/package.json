@@ -2,15 +2,16 @@
   "name": "fantasy-character-creation",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "character-creation.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node src/character-creator.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rachel White",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.5.11",

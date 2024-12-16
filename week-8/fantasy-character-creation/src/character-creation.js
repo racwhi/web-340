@@ -1,3 +1,9 @@
+/**
+ * Author: Rachel White
+ * Date: 12/11/2024
+ * File Name: character-creator.js
+ * Description: fantasy game character character-creator.js
+ */
 "use strict";
 
 /*
@@ -28,19 +34,40 @@ function getCharacters(callback) {
 */
 
 // For promises:
-/*
-const fs = require('fs').promises;
 
-async function createCharacter(character) {
+const fs = require('fs').promises;
+const path = require('path');
+
+const writeFilePath = path.join(__dirname, '../characterData.json');
+//async function createCharacter(classType, gender, funFact) {
+ async function createCharacter(character) {
   // TODO: Implement this function
+  try {
+    let characters = [];
+    characters.push(character);
+    await fs.writeFile(writeFilePath, `${character}\n`, { encoding: "utf8" });
+  } catch (error) {
+    throw new Error("Write error");
+  }
 }
+
+       
+
 
 async function getCharacters() {
   // TODO: Implement this function
+  try {
+    const data = await fs.readFile(writeFilePath, "utf8");
+    return JSON.parse(data);
+  } catch (error) {
+    throw new Error("Read error");
+  }
 }
-*/
+
 
 // Uncomment the appropriate exports depending on whether you're using callbacks or promises:
 
 // module.exports = { createCharacter, getCharacters }; // For callbacks
-// module.exports = { createCharacter, getCharacters }; // For promises
+ module.exports = { createCharacter, getCharacters }; // For promises
+
+
