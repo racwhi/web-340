@@ -1,0 +1,25 @@
+{
+  "name": "fantasy-game-character",
+  "version": "1.0.0",
+  "description": "A fantasy game character management system",
+  "main": "src/game-characters.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node src/game-characters.js"
+  },
+  "keywords": [
+    "fantasy",
+    "game",
+    "character",
+    "jest"
+  ],
+  "author": "Rachel White",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "jest": "^29.7.0"
+  }
+}
